@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+
+/*
+En el caso de los estilos como background-image, el uso de paleta de colores, tamaños de letra y mas funciona correctamente si lo colocas dentro de @theme
+*/
+@theme {
+    --background-image-home: url('/bg.svg');
+}
+
+/*
+Pero para manejar las utilidades personalizadas como padding, margin, width, height, size, etc, tienes que usar @utility como lo indica en la misma documentación, la clase se llama home-xl:
+*/
+@utility bg-home-xl {
+    background-size: 50%;
+}
+ 
+
+/*Es mejor aplicar el de tailwind con @theme porque me permite usar lg:bg-home o otras utilidades de tailwind 
+que si no usara @theme no funcionaria y tendria que usar medias queries para que funcione
+*/
+.bg-test {
+    background-image: url('/bg.svg');
+}
