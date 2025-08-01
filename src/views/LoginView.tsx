@@ -1,10 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-import { isAxiosError } from 'axios'
 
 import ErrorMessage from '../components/ErrorMessage'
 import type { LoginFormData } from '../types'
-import api from '../config/axios'
 import { toast } from 'sonner'
 import { useMutation } from '@tanstack/react-query'
 import { loginUser } from '../api/DevTreeAPI'
