@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+# 🌿 DevTree Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1867" height="898" alt="image" src="https://github.com/user-attachments/assets/9d6a5ec8-24e8-4268-890d-215b0cc67f2e" />
 
-Currently, two official plugins are available:
+Frontend de **DevTree**, una aplicación tipo *Linktree* para desarrolladores. Permite crear un perfil público con nombre, descripción, imagen y enlaces personalizados. Esta interfaz está desarrollada con **React + TypeScript**, usa **Tailwind CSS** para el diseño, y se conecta a un backend propio para manejar usuarios y autenticación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌐 Sitio en línea
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🔗 [https://devtree-project-erik.netlify.app/](https://devtree-project-erik.netlify.app/)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✨ Funcionalidades principales
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Registro y login de usuarios
+- Creación de perfiles personalizados con nombre, handle y descripción
+- Agregado y ordenamiento de enlaces estilo Linktree (drag & drop)
+- Imagen de perfil con carga desde el frontend
+- Vista pública accesible desde `/@handle`
+- Interfaz protegida para administración
+- Manejo de errores y feedback con notificaciones
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tecnologías utilizadas
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React 19 + TypeScript**
+- **React Router v7**
+- **React Hook Form** para formularios
+- **Tailwind CSS** para estilos
+- **@dnd-kit** para ordenamiento de enlaces
+- **React Query** para el manejo de peticiones y caché
+- **Axios** para comunicación con el backend
+- **Sonner** para notificaciones modernas
+- **Headless UI** y **Heroicons** para UI accesible y atractiva
+- **Vite** como bundler
+
+---
+## 🖼️ Capturas de pantalla
+
+| Panel de administración | Vista pública (`/@handle`) | Formulario de registro/login |
+| :----------------------: | :-----------------------: | :--------------------------: |
+| <img src="https://github.com/user-attachments/assets/26eae000-1bdd-4f84-98ee-305a918604e7" width="300"/> | <img src="https://github.com/user-attachments/assets/6dec2ba8-ce55-4eab-90b4-84d6e50cb35b" width="300"/> | <img src="https://github.com/user-attachments/assets/2a8e623a-9e21-45ba-9fd9-450003d2f97c" width="300"/> |
+
